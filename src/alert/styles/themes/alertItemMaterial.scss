@@ -1,0 +1,72 @@
+@import 'alertItemMaterialVariations';
+
+.anAlertItem__item--theme-material {
+  display: flex;
+  flex-direction: row;
+  width: 300px;
+  background-color: rgb(255, 255, 255);
+  color: rgba(0, 0, 0, 0.870588);
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;
+  border-radius: 3px;
+  margin: 12px auto;
+  padding: 15px;
+
+  .anAlertItem__contentContainer {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .anAlertItem__content {
+    flex: 10;
+  }
+
+  .anAlertItemContent__title {
+    font-size: 16px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.870588);
+  }
+
+  .anAlertItemContent__message {
+    font-size: 14px;
+    line-height: 16px;
+    margin: 8px 0px;
+    color: rgba(0, 0, 0, 0.541176);
+  }
+
+  .anAlertItem__closeAction {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .anAlertItem__closeActionIcon {
+    position: relative;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    overflow: hidden;
+    cursor: pointer;
+
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      top: 50%;
+      left: 0;
+      margin-top: -1px;
+      background: rgba(0, 0, 0, 0.870588);
+      border-radius: 5px;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}

@@ -1,0 +1,17 @@
+<div [attr.ngClass]="customContainerClasses">
+  <div class="anAlertItem__contentContainer">
+    <div class="anAlertItem__content">
+      {{customContainerClasses}}
+      <div class="anAlertItemContent__title">
+        {{_options.title}}
+      </div>
+      <div class="anAlertItemContent__message">
+        {{_options.message}}
+      </div>
+    </div>
+    <div class="anAlertItem__closeAction">
+      <span class="anAlertItem__closeActionIcon" (click)="close()"></span>
+    </div>
+
+  </div>
+</div>

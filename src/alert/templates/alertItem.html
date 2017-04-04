@@ -1,0 +1,22 @@
+<div #container class="anAlertItem__item anHidden" (click)="clickToClose()">
+
+  <div *ngIf="!hasDynamicTemplate" [ngClass]="customContainerClasses">
+    <div class="anAlertItem__contentContainer">
+      <div class="anAlertItem__content">
+        <div class="anAlertItemContent__title">
+          {{_options.title}}
+        </div>
+        <div class="anAlertItemContent__message">
+          {{_options.message}}
+        </div>
+      </div>
+      <div class="anAlertItem__closeAction">
+        <span class="anAlertItem__closeActionIcon" (click)="close()"></span>
+      </div>
+
+    </div>
+  </div>
+
+  <template *ngIf="hasDynamicTemplate" #templateContainer></template>
+
+</div>

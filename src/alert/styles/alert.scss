@@ -1,0 +1,46 @@
+@import "animations";
+@import "themes/alertItemMaterial";
+
+.anAlert__container {
+  position: fixed;
+  display: flex;
+  height: 100%;
+  min-height: 100%;
+  pointer-events: none;
+  flex-direction: column;
+
+  &--left {
+    left: 0;
+    top: 0;
+    margin-left: 20px;
+  }
+
+  &--center {
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+  }
+
+  &--right {
+    right: 0;
+    top: 0;
+    margin-right: 20px;
+  }
+
+  &--reverse {
+    flex-direction: column-reverse;
+  }
+}
+
+.anAlertItem__item {
+  position: relative;
+  pointer-events: all;
+}
+
+.anHidden {
+  display: none;
+}
+
+.anTranslateXCenter {
+  transform: translateX(-50%);
+}

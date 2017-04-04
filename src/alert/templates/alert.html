@@ -1,0 +1,32 @@
+<div class="anAlert__container anAlert__container--left"
+     *ngIf="containerStates.left"
+     [ngClass]="{'anAlert__container--reverse': containerDirections.reverseLeft }">
+  <an-alert-item *ngFor="let item of items.left"
+                 [@ASD]="item.$$animationState"
+                 [options]="item"
+                 (onClose)="onClose($event)"
+                 (onAlertItemUpdates)="onAlertItemUpdates($event)">
+  </an-alert-item>
+</div>
+
+<div class="anAlert__container anAlert__container--center"
+     *ngIf="containerStates.center"
+     [ngClass]="{'anAlert__container--reverse': containerDirections.reverseCenter }">
+  <an-alert-item *ngFor="let item of items.center"
+                 [@ASD]="item.$$animationState"
+                 [options]="item"
+                 (onClose)="onClose($event)"
+                 (onAlertItemUpdates)="onAlertItemUpdates($event)">
+  </an-alert-item>
+</div>
+
+<div class="anAlert__container anAlert__container--right"
+     *ngIf="containerStates.right"
+     [ngClass]="{'anAlert__container--reverse': containerDirections.reverseRight }">
+  <an-alert-item *ngFor="let item of items.right"
+                 [@ASD]="item.$$animationState"
+                 [options]="item"
+                 (onClose)="onClose($event)"
+                 (onAlertItemUpdates)="onAlertItemUpdates($event)">
+  </an-alert-item>
+</div>

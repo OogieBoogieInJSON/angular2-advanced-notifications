@@ -1,0 +1,24 @@
+@import 'alertItemMaterialVariables';
+
+@each $type in $types {
+  .anAlertItem__item--type-#{$type} {
+    .anAlertItem__item--theme-material {
+      background-color: map-get(map-get($typesMap, $type), bg-color);
+      color: map-get(map-get($typesMap, $type), text-color);
+
+      .anAlertItemContent__title {
+        color: map-get(map-get($typesMap, $type), title-color);
+      }
+
+      .anAlertItemContent__message {
+        color: map-get(map-get($typesMap, $type), message-color);
+      }
+
+      .anAlertItem__closeActionIcon {
+        &::before, &::after {
+          background: map-get(map-get($typesMap, $type), close-icon-color);
+        }
+      }
+    }
+  }
+}
