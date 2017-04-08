@@ -8,14 +8,17 @@ import { AnBusService } from 'angular2-advanced-notifications';
 })
 export class AppComponent {
   constructor(private anBusService: AnBusService) {
-    console.warn(anBusService);
   }
 
   ngAfterViewInit() {
+
+  }
+  title = 'app works!';
+  show() {
+    console.warn('yolo');
     this.anBusService.showAlert({
       title: 'adasd',
       message: 'asdasdads'
     });
   }
-  title = 'app works!';
 }

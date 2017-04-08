@@ -5,7 +5,8 @@ import {
   state,
   style,
   transition,
-  animate
+  animate,
+  Inject
  } from '@angular/core';
 import { Subscription } from 'rxjs/Subscription';
 import { Subject } from 'rxjs/Subject';
@@ -138,10 +139,10 @@ export class AnAlert {
     showNotification: false
   };
 
-  constructor(public anBus: AnBusService) {
+  constructor(private anBus: AnBusService) {
     this.globalAlertConfig = anBus.getGlobalConfigForAlerts();
 
-    this._updateBrowserViewports();
+    // this._updateBrowserViewports();
     this._subscribeToBus();
   }
 
