@@ -9,7 +9,7 @@
         "rootDir": ".",
         "sourceMap": true,
         "inlineSources": true,
-        "target": "es5",
+        "target": "es2015",
         "skipLibCheck": true,
         "lib": [
             "es2015",
@@ -22,7 +22,9 @@
     ],
     "angularCompilerOptions": {
         "skipTemplateCodegen": true,
+        "annotateForClosureCompiler": true,
         "strictMetadataEmit": true,
-        "annotateForClosureCompiler": true
+        "flatModuleOutFile": "index.js",
+        "flatModuleId": "angular2-advanced-notifications"
     }
 }

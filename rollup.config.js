@@ -1,10 +1,9 @@
 export default {
-    entry: './dist/index.js',
+    entry: './dist/modules/angular2-advanced-notifications.es5.js',
     dest: './dist/bundles/angular2-advanced-notifications.umd.js',
     format: 'umd',
-    // Global namespace.
-    moduleName: 'ng.angular2-advanced-notifications',
-    // External libraries.
+    exports: 'named',
+    moduleName: 'ng.angular2AdvancedNotifications',
     external: [
         '@angular/core',
         '@angular/common',
