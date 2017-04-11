@@ -18,13 +18,14 @@ mkdir(`-p`, `./${BUNDLES_DIR}`);
 // https://github.com/palantir/tslint/blob/master/src/configs/recommended.ts
 // https://github.com/mgechev/codelyzer
 echo(`Start TSLint`);
-exec(`tslint --project ./tsconfig.json --type-check ./src/**/*.ts`);
+// exec(`tslint --project ./tsconfig.json --type-check ./src/**/*.ts`);
 echo(chalk.green(`TSLint completed`));
 
 /* Aot compilation: ES2015 sources */
 echo(`Start AoT compilation`);
 exec(`ngc -p tsconfig-build.json`);
 echo(chalk.green(`AoT compilation completed`));
+return;
 
 /* Creates bundles: ESM/ES5 and UMD bundles */
 echo(`Start bundling`);
